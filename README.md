@@ -11,7 +11,8 @@ Once applied, the script gathers the matching requests, retrieves the relevant m
 Citations can be downloaded in either .bib or .pdf format. 
 - **.bib files** can be imported into Zotero, EndNote, or any other citation management tool.
 - **.pdf files** are formatted following APA guidelines.
-** Currently, the **.pdf** file option is only formatting English Language characters. For foreign language citations, we recommend the **.bib** option.
+
+Currently, the **.pdf** file option is only formatting English Language characters. For foreign language citations, we recommend the **.bib** option.
 
 ## Link to Bowdoin College ILL website
 https://illiad.bowdoin.edu/
