@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+	<title>Request History</title>
+	<#INCLUDE filename="include_head.html">
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+
+<body>
+	<#INCLUDE filename="include_header.html">
+	<#INCLUDE filename="include_menu.html">
+
+	<div class="container">
+		<main id="content" aria-label="Content">
+
+			<div style="display: flex; justify-content: space-between;">
+
+				<h2 class="page-header"><span aria-hidden="true" class="fas fa-check-circle fa-1x"></span> Finished Requests</h2>	
+				
+				<!-- Export Citations Help Tooltip -->
+				<details class="export-help-dropdown">
+					<summary>
+						<div class="btn-custom-green material-icons" id="export-help-btn">settings</div>
+					</summary>
+
+					<div class="export-help-dropdown-card">
+						<div class="text-muted export-help-dropdown-title">Export Citations</div>
+
+						<ul style="color: white; list-style-type:none; padding: 0;">
+							<li>
+								<span class="material-icons">file_present</span> BibTeX
+								<span style="padding-left: 78px; font-style: italic;">(All languages)</span>
+							</li>
+							
+							<ul>
+
+								<li style="font-style: italic;">
+									** We recommend&nbsp;
+									<a href="https://bowdoin.libguides.com/c.php?g=271729&p=1814087" target="_blank">Zotero</a> 
+									&nbsp;or&nbsp;
+									<a href="https://bowdoin.libguides.com/c.php?g=271729&p=1813979" target="_blank">EndNote</a>
+									,
+								</li>
+								<li style="font-style: italic;">which should be installed on device **</li>
+								<li>1. Open 'downloads'</li>
+								<li>2. Right click on file</li>
+								<li>3. Open file with Zotero / EndNote</li>
+							</ul>
+							<li>
+								<span class="material-icons">picture_as_pdf</span> PDF
+								<!-- <span style="padding-left: 124px; font-style: italic;">(English)</span> -->
+							</li>
+							
+							<ul>
+								<li>Citations follow APA guidelines <br/> for English language characters</li>
+								
+							</ul>
+						</ul>
+					</div>
+				</details>
+
+			</div>
+
+            <div class="subheader-note">Up to 10 years of requests are available.</div>
+
+			<div style="display: flex; justify-content: space-between; gap: 10px; ">
+				<#INCLUDE filename="include_sort_requests.html">
+				<#INCLUDE filename="include_export_citations.html">
+			</div>
+			
+		</main>
+
+		<div class="card-wrap">
+			<#DATAREPEATER name="ViewRequestHistory" TemplateFile="templates/DataRow_DefaultRequest.html" noDataAction="You have no requests" orderby="TransactionNumber DESC">
+		</div>
+
+		<#INCLUDE filename="include_footer.html">  
+	</div>
+
+	<!-- <script type="text/javascript" src="js/custom_script/RequestSort.js?v=3.0"></script> -->
+    <script type="module" src="js/custom_script/DownloadCitation.js" ></script>
+	<script type="text/javascript" src="js/custom_script/RequestSort.js"></script>
+	<script type="text/javascript" src="js/custom_script/DisplayLastTransactionDate.js"></script>
+
+</body>
+
+</html>

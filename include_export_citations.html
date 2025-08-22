@@ -1,0 +1,45 @@
+<div class="export-by-wrap">
+
+    <span class="">Filter and Download Citations</span>
+
+    <div>
+
+        <div style="display: flex; align-items: center; gap: 20px;">
+            <select name="ExportOptions" id="ExportOptions" class="custom-select">
+                <option id="manuallySelect" value="manuallySelect" selected>Select Manually</option>
+                <option id="selectAll" value="selectAll">Select All</option>
+                <option id="selectYear" value="selectYear">Select By Year</option>
+                <option id="clearAll" value="clearAll">Clear All</option>
+            </select>
+
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-secondary dropdown-toggle" id="export-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="fa fa-download fa-xs"></span>&nbsp;Export
+                </button>
+
+                <div class="dropdown-menu dropdown-menu-right">
+                    <button class="btn btn-light dropdown-item" id="bib-file"><span aria-hidden="true" class="fas fa-copy text-primary"></span>&nbsp;&nbsp;BibTeX</button>
+                    <button class="btn btn-light dropdown-item" id="pdf-file"><span aria-hidden="true" class="fas fa-copy text-primary" style="color: #677c2f !important;"></span>&nbsp;&nbsp;PDF</button>
+                </div>
+            </div>
+        </div>
+        
+        <select name="selectYear" id="YearOptions" class="selectYear custom-select" style="display:none;">
+            <option value="" selected> Transaction Year</option>
+            <option value="2025">2025</option>
+            <option value="2024">2024</option>
+            <option value="2023">2023</option>
+            <option value="2022">2022</option>
+            <option value="2021">2021</option>
+            <option value="2020">2020</option>
+            <option value="2019">2019</option>
+            <option value="2018">2018</option>
+            <option value="2017">2017</option>
+            <option value="2016">2016</option>
+            <option value="2015">2015</option>
+            <option value="2014">2014</option>
+        </select>
+
+    </div>
+
+</div>
